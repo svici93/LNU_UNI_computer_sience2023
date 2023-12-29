@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <title>Light Sensor Monitoring</title>
+</head>
+<body>
+  <div id="lightGraph">
+    <canvas id="lightCanvas"></canvas>
+  </div>
+  <div class="container">
+    <h1>Light Sensor Monitoring</h1>
+    <div class="sensor-list" id="sensorList">
+      <!-- Sensor options will be populated dynamically using JavaScript -->
+    </div>
+    <div class="sensor-details" id="sensorDetails">
+      <!-- Sensor details dynamically populated using JavaScript -->
+    </div>
+    <div id="historicalGraph">
+      <canvas id="historicalCanvas"></canvas>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
